@@ -374,3 +374,10 @@ html.boxed.sticky-header-active #header .header-container {
 .custom-nav-sidebar > li > a.active {
 		color: var(--primary) !important;
 }
+
+.custom-image-size {
+	width: 100%; /* Mantiene el ancho al 100% del contenedor */
+	height: 250px; /* Fija la altura de todas las imágenes */
+	object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+	border-radius: 10px; /* Bordes redondeados para mejor estética */
+}
