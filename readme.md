@@ -56,6 +56,7 @@ Front-end:
 - Desarrollo de la estructura en HTML (encabezados, enlaces, fotos ...)
 - Diseño de la pagina con CSS (colores, tipo de letra, formato de la fotos ...)
 - Implementacion de Javascript, si fuese necesario (funcionalidades de botones, animacioes ...)
+- Eliminar archivos innecesarios para quitarle peso al proyecto
 
 #### Historia de usuario CSI
 | Historia de usuairo CSI | 
