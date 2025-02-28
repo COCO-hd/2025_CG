@@ -134,3 +134,28 @@ Theme Version:	12.0.0
 		}
 	});
 })).apply( this, [ jQuery ]);
+
+// Botones ofertas especiales
+document.getElementById("viewAllBtn").addEventListener("click", function() {
+	// Mostrar todas las ofertas adicionales
+	const extraOffers = document.querySelectorAll('.extra-offer');
+	extraOffers.forEach(function(offer) {
+		offer.style.display = "block";
+	});
+
+	// Ocultar el botón "View All" y mostrar el botón "View Less"
+	document.getElementById("viewAllBtn").style.display = "none";
+	document.getElementById("viewLessBtn").style.display = "inline-block";
+});
+
+document.getElementById("viewLessBtn").addEventListener("click", function() {
+	// Ocultar las ofertas adicionales
+	const extraOffers = document.querySelectorAll('.extra-offer');
+	extraOffers.forEach(function(offer) {
+		offer.style.display = "none";
+	});
+
+	// Mostrar el botón "View All" y ocultar el botón "View Less"
+	document.getElementById("viewAllBtn").style.display = "inline-block";
+	document.getElementById("viewLessBtn").style.display = "none";
+});

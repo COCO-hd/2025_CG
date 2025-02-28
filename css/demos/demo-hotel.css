@@ -374,3 +374,84 @@ html.boxed.sticky-header-active #header .header-container {
 .custom-nav-sidebar > li > a.active {
 		color: var(--primary) !important;
 }
+
+.custom-image-size {
+	width: 100%; /* Mantiene el ancho al 100% del contenedor */
+	height: 250px; /* Fija la altura de todas las imágenes */
+	object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+	border-radius: 10px; /* Bordes redondeados para mejor estética */
+}
+
+.custom-carousel-btn {
+	width: 60px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+	left: -80px;
+}
+
+.carousel-control-next {
+	right: -80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	filter: invert(100%);
+}
+
+/* Ajustar todas las tarjetas a la misma altura */
+.card {
+    height: 100%; /* Garantiza que todas las tarjetas ocupen el mismo espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Mantener las imágenes del mismo tamaño */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajusta según el diseño deseado */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Asegurar que el cuerpo de la tarjeta se expanda */
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Forzar altura de las tarjetas para que todas sean iguales */
+.carousel-item .row {
+    min-height: 550px; /* Ajusta este valor según el diseño */
+}
+
+/* Asegurar que el contenedor del carrusel mantenga la altura */
+#hotelCarousel .carousel-inner {
+    display: flex;
+    align-items: center; /* Centra los elementos y evita saltos */
+}
+
+/* Botones alineados uniformemente */
+.card-body .btn {
+    margin-top: auto;
+}
+
+.underline-hover {
+	text-decoration: none; /* Asegura que el enlace no esté subrayado por defecto */
+}
+
+.underline-hover:hover {
+	text-decoration: underline !important; /* Fuerza el subrayado al pasar el cursor */
+}
+
+:target {
+    scroll-margin-top: 175px; /* Ajusta este valor según la altura de tu menú */
+}

@@ -14,6 +14,7 @@ AC Hotels Guadalajara es una pagina dedicada a dar informacion sobre un hotel pe
     - [DSI (Diseño del Sistema de Información)](#dsi-diseño-del-sistema-de-información)
       - [Historia de usuario DSI](#historia-de-usuario-dsi)
     - [CSI (Construcción del Sistema de Información)](#csi-construcción-del-sistema-de-información)
+      - [Historia de usuario CSI](#historia-de-usuario-csi)
     - [IAS (Implementación y Administración del Sistema)](#ias-implementación-y-administración-del-sistema)
       - [Historia de usuario ASI](#historia-de-usuario-asi-1)
 
@@ -52,7 +53,18 @@ Front-end:
 |**Para** hospedarme en él. |
 
 ### CSI (Construcción del Sistema de Información)
-Desarrollo de la estructura básica de la página web en HTML, con un posterior trabajo de diseño con CSS y añadir alguna funcionalidad de JavaScript si es necesario
+- Desarrollo de la estructura en HTML (encabezados, enlaces, fotos ...)
+- Diseño de la pagina con CSS (colores, tipo de letra, formato de la fotos ...)
+- Implementacion de Javascript, si fuese necesario (funcionalidades de botones, animacioes ...)
+- Eliminar archivos innecesarios para quitarle peso al proyecto
+
+#### Historia de usuario CSI
+| Historia de usuairo CSI | 
+| ------------- |
+|**Como** usuario. |
+|**Quiero** poder ver información estructurada del hotel|
+|**Para** ver solo la informacion que me pueda interesar.|
+
 ### IAS (Implementación y Administración del Sistema) 
 - Publicación de la página web: Se alojará en un servidor estable y seguro, con optimización para carga rápida y accesibilidad.
 - Mantenimiento correctivo: Corrección de errores o fallos en la estructura y funcionalidad del sitio web.
