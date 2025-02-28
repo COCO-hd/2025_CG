@@ -444,3 +444,14 @@ html.boxed.sticky-header-active #header .header-container {
     margin-top: auto;
 }
 
+.underline-hover {
+	text-decoration: none; /* Asegura que el enlace no esté subrayado por defecto */
+}
+
+.underline-hover:hover {
+	text-decoration: underline !important; /* Fuerza el subrayado al pasar el cursor */
+}
+
+:target {
+    scroll-margin-top: 175px; /* Ajusta este valor según la altura de tu menú */
+}
