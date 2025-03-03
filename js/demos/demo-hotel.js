@@ -159,51 +159,33 @@ document.getElementById("viewLessBtn").addEventListener("click", function() {
 	document.getElementById("viewAllBtn").style.display = "inline-block";
 	document.getElementById("viewLessBtn").style.display = "none";
 });
-//  Schema.org
-document.addEventListener("DOMContentLoaded", function () {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "Hotel",
-        "name": "AC Hotel Guadalajara",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Av. del Ejército, 6",
-            "addressLocality": "Guadalajara",
-            "postalCode": "19004",
-            "addressCountry": "ES"
-        },
-        "telephone": "+34 949248370",
-        "url": "https://www.marriott.com/es/hotels/madgu-ac-hotel-guadalajara-spain/overview/",
-        "image": "https://www.tusitio.com/img/AC-Hotel.png",
-        "priceRange": "$$",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "reviewCount": "1200"
-        },
-        "servesCuisine": "Restaurante Internacional",
-        "amenityFeature": [
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "WiFi gratuito",
-                "value": "true"
-            },
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "Gimnasio",
-                "value": "true"
-            },
-            {
-                "@type": "LocationFeatureSpecification",
-                "name": "Piscina",
-                "value": "true"
-            }
-        ]
-    };
 
-    // Crear el script y añadirlo al head
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify(schemaData);
-    document.head.appendChild(script);
+// Deslizar carusel táctil
+document.addEventListener("DOMContentLoaded", function() {
+    var carousel = document.querySelector("#hotelCarousel");
+    if (carousel) {
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        carousel.addEventListener("touchstart", function(event) {
+            touchStartX = event.touches[0].clientX;
+        });
+
+        carousel.addEventListener("touchmove", function(event) {
+            touchEndX = event.touches[0].clientX;
+        });
+
+        carousel.addEventListener("touchend", function() {
+            if (touchStartX - touchEndX > 50) {
+                // Deslizar hacia la izquierda (siguiente slide)
+                var nextButton = document.querySelector("#hotelCarousel .carousel-control-next");
+                if (nextButton) nextButton.click();
+            } else if (touchEndX - touchStartX > 50) {
+                // Deslizar hacia la derecha (slide anterior)
+                var prevButton = document.querySelector("#hotelCarousel .carousel-control-prev");
+                if (prevButton) prevButton.click();
+            }
+        });
+    }
 });
+
