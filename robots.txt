@@ -1,0 +1,19 @@
+# Permitir a todos los motores de búsqueda rastrear todo el sitio
+User-agent: *
+Disallow:
+
+# Bloquear el acceso a la carpeta /admin para todos los bots
+User-agent: *
+Disallow: /admin/
+
+# Bloquear el acceso a la página de inicio de sesión
+User-agent: *
+Disallow: /login
+
+# Bloquear el acceso a la página de contacto (si lo prefieres)
+User-agent: *
+Disallow: /contacto
+
+# Permitir que Googlebot acceda a todo
+User-agent: Googlebot
+Disallow:
