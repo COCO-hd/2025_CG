@@ -160,7 +160,7 @@ document.getElementById("viewLessBtn").addEventListener("click", function() {
 	document.getElementById("viewLessBtn").style.display = "none";
 });
 
-// Deslizar carusel táctil
+// Deslizar carrusel táctil
 document.addEventListener("DOMContentLoaded", function() {
     var carousel = document.querySelector("#hotelCarousel");
     if (carousel) {
